@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "chat",
+    "name": "React Native Chat",
+    "description": "A Chat Application in React Native ",
     "slug": "chat",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/chatbot.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
