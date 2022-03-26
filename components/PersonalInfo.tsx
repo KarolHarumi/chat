@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { View, Image, Text, TextInput, Button } from "react-native";
+import ImageChooser from "./ImageChooser";
 import Styles from "./Styles";
 
 const PersonalInfo = () => {
   const [name, setName] = useState("");
+  const [image, setImage] = useState("");
 
   return (
     <View style={Styles.personalInfoContainer}>
@@ -19,7 +21,10 @@ const PersonalInfo = () => {
         />
       </View>
 
+      <ImageChooser onChangeImage={(image) => setImage(image)} />
+      
       <Button title="Start chatting!" onPress={() => {}} />
+
     </View>
   );
 }

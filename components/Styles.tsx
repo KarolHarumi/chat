@@ -4,23 +4,27 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFD7E5',
-    alignItems: 'center',
-    justifyContent: 'center',
+    //alignItems: 'center',
+    //justifyContent: 'center',
+    width: "100%",
+  },
+
+  scrollContainer: {
     width: "100%",
   },
 
   // personal info
   personalInfoContainer: {
-    width: "80%",
     flex: 1,
-    padding: 10,
+    padding: 20,  
     justifyContent: "space-between",
-    alignItems: "stretch",
+    alignItems: "center",
   },
 
   logo: { 
-    width: "auto", 
-    resizeMode: "contain" 
+    resizeMode: "contain",
+    width: 200,
+    maxHeight: 150,
   },
 
   enterYourNameContainer: {
@@ -41,5 +45,17 @@ export default StyleSheet.create({
     padding: 16,
     backgroundColor: "#fff",
   },
+
+  // ImageChooser
+  imageChooserContainer: {
+    alignSelf: "center",
+  },
+
+  avatar: {
+    width: 200,
+    height: 200,
+    borderWidth: 1,
+    borderColor: "#404040",
+  }
 
 });
