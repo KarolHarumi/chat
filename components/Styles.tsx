@@ -56,6 +56,28 @@ export default StyleSheet.create({
     height: 200,
     borderWidth: 1,
     borderColor: "#404040",
-  }
+  },
+
+  // chat
+  sendSection: {
+
+  },
+
+  // chatItem
+  flatListItem: {
+
+  },
+
+  chatItemHeader: {
+
+  },
+
+  smallItalicText: {
+
+  },
+
+  chatText: {
+
+  },
 
 });
