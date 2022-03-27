@@ -4,9 +4,8 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFD7E5',
-    //alignItems: 'center',
-    //justifyContent: 'center',
     width: "100%",
+    padding: 16,
   },
 
   scrollContainer: {
@@ -59,25 +58,70 @@ export default StyleSheet.create({
   },
 
   // chat
-  sendSection: {
+  containerChat: {
+    padding: 16,
+  },
 
+  sendSection: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+  },
+
+  inputMessage: {
+    width: '72%',
+    borderRadius: 10,
+    fontSize: 18,
+    backgroundColor: "#fff",
+    padding: 16,
+  },
+
+  buttonMessage: {
+    width: '25%',
+    backgroundColor: '#6cc7f5',
+    borderRadius: 10,
+    padding: 16,
+  },
+
+  textButtonMessage: {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 18,
   },
 
   // chatItem
   flatListItem: {
-
+    marginBottom: 16,
+    justifyContent: 'space-between',
+    flexDirection: 'row',
   },
 
-  chatItemHeader: {
-
+  smallAvatar: {
+    width: 32,
+    height: 32,
+    borderWidth: 1,
+    borderColor: "#484655",
+    borderRadius: 50,
+    marginRight: 16,
+    position: 'absolute',
+    left: -8,
+    top: -8,
   },
 
-  smallItalicText: {
-
+  message: {
+    backgroundColor: '#fff',
+    padding: 26,
+    borderRadius: 20,
+    marginLeft: 16,
+    marginTop: 16,
   },
 
   chatText: {
+    marginTop: 8,
+  },
 
+  smallItalicText: {
+    fontSize: 10,
+    fontStyle: 'italic',
   },
 
 });

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, FlatList, ListRenderItem } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, FlatList, ListRenderItem } from "react-native";
 import { ChatItem } from "./ChatItem";
 import { RenderChatItem } from './ChatItem';
 import Styles from "./Styles";
@@ -17,7 +17,8 @@ const Chat = ({ username, image }: ChatProps) => {
   );
 
   return (
-    <View style={ Styles.container }>
+    <View style={ Styles.containerChat }>
+      <Text>Hi {username}! You can chat here</Text>
 
       <FlatList 
         inverted
@@ -28,13 +29,14 @@ const Chat = ({ username, image }: ChatProps) => {
 
       <View style={ Styles.sendSection }>
         <TextInput 
-          style={ Styles.inputText } 
+          style={ Styles.inputMessage } 
           value={ chatInput } 
           onChangeText={(text) => setChatInput(text) } 
+          placeholder={'Enter your message'}
         />
 
-        <Button 
-          title="Send" 
+        <TouchableOpacity 
+          style={ Styles.buttonMessage }
           onPress={() => {
             setChatItemList([
                 ...chatItemList, 
@@ -48,9 +50,11 @@ const Chat = ({ username, image }: ChatProps) => {
               ]);
 
               setChatInput("");
-        }} />
+        }}>
+          <Text style={ Styles.textButtonMessage }>Send</Text>
+        </TouchableOpacity>
+        
       </View>
-      <Text>Hi {username}! You can chat here</Text>
     </View>
   );
 };

@@ -33,23 +33,19 @@ const RenderChatItem = ({ chatItem, username }: Props) => {
     <Animated.View 
       style={[
         Styles.flatListItem, 
-        { borderColor: username == chatItem.by ? "green" : "blue" }, 
         { opacity: animatedValue },
         { transform: [{ scale: animatedValue }] },
       ]}>
-      <View style={ Styles.chatItemHeader }>
-        <Image source={{ uri: "data:image/jpge;base64," + avatarImage }} style={ Styles.avatar } />
 
-        <Text style={ Styles.smallItalicText }>
-          {chatItem.by} at {new Date(chatItem.timeStamp).toLocaleTimeString}
+      <View style={ Styles.message }>
+        <Image source={{ uri: "data:image/jpge;base64," + avatarImage }} style={ Styles.smallAvatar } />
+        <Text style={[ Styles.flatListItem, { color: username == chatItem.by ? "#404040" : "#D26E97" } ]}>
+          By {chatItem.by} at {new Date(chatItem.timeStamp).toLocaleTimeString()} 
         </Text>
+        <Text style={ Styles.chatText}>{chatItem.text}</Text>
       </View>
-
-      <Text style={ Styles.chatText}>{chatItem.text}</Text>
     </Animated.View>
   );
 }
-
-
 
 export { ChatItem, RenderChatItem };
