@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Chat'>
+      <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Chat" component={ChatbotScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
