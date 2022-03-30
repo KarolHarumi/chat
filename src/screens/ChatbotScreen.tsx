@@ -7,7 +7,10 @@ import { useState } from 'react';
 import AppLoading from 'expo-app-loading';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const ChatbotScreen = () => {
+const ChatbotScreen = ( { route }: any) => {
+  //const { screenNumber } = route.params;
+  //console.log('chat', screenNumber);
+
   const [username, setUsername] = useState("");
   const [image, setImage] = useState("");
   const [isLoading, setIsLoading] = useState(true);

@@ -1,6 +1,3 @@
-//import { SafeAreaView } from 'react-native';
-//import { useState } from 'react';
-
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -13,8 +10,25 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
-        <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Navigator 
+        initialRouteName='Home'
+        screenOptions={{
+          headerTintColor: 'white',
+          headerStyle: { backgroundColor: 'orange' }
+        }}
+      >
+        <Stack.Screen 
+          name="Home" 
+          component={HomeScreen} 
+          options={{ 
+            title: 'Teste', 
+            headerTitleStyle: {
+              fontWeight: 'bold',
+              fontSize: 30
+            }
+          }} 
+        />
+
         <Stack.Screen name="Chat" component={ChatbotScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
